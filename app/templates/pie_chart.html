@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart of Expenses</title>
+    <!-- Include the Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Expense Distribution (Pie Chart)</h1>
+        <a href="{{ url_for('routes.index') }}" class="btn btn-primary mt-4">Go to Dashboard</a>
+
+        
+        <!-- Canvas where the pie chart will be drawn -->
+        <canvas id="expensePieChart" width="400" height="400"></canvas>
+    </div>
+
+    <script>
+        // Step 2: JavaScript to render the pie chart using Chart.js
+        var ctx = document.getElementById('expensePieChart').getContext('2d');
+        var expensePieChart = new Chart(ctx, {
+            type: 'pie',  // Type of chart (pie chart)
+            data: {
+                labels: {{ labels | tojson | safe }},  // Categories (from Flask route)
+                datasets: [{
+                    label: 'Expense Distribution',
+                    data: {{ values | tojson | safe }},  // Corresponding expense amounts (from Flask route)
+                    backgroundColor: [ '#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40', '#ffcd56', '#b0deff', '#7bfc9e'],  // Colors for the pie chart
+                    hoverOffset: 4  // Hover effect (slightly increase the size of the segments when hovered)
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>
