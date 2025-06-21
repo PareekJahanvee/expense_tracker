@@ -1,0 +1,10 @@
+{"id": "1731233064", "title": "dog food", "amount": 950.0, "category": "Pet supplies", "date": "2024-11-05"}
+{"id": "1731253172", "title": "veggies", "amount": 900.0, "category": "Food", "date": "2024-11-05"}
+{"id": "1731229835", "title": "solar panels", "amount": 20000.0, "category": "Electrical Appliances", "date": "2024-11-08"}
+{"id": "1731229886", "title": "harness", "amount": 600.0, "category": "Pet supplies", "date": "2024-11-08"}
+{"id": "1731292748", "title": "register", "amount": 400.0, "category": "Stationary", "date": "2024-11-08"}
+{"id": "1731208273", "title": "Blush", "amount": 700.0, "category": "Cosmetics", "date": "2024-11-10"}
+{"id": "1731210138", "title": "Grocery", "amount": 500.0, "category": "Food", "date": "2024-11-10"}
+{"id": "1731210165", "title": "Vase", "amount": 380.0, "category": "Decor", "date": "2024-11-10"}
+{"id": "1731210652", "title": "scale", "amount": 300.0, "category": "Stationary", "date": "2024-11-10"}
+{"id": 1731292749, "title": "laptop", "amount": 90000.0, "category": "Electrical Appliances", "date": "2025-05-02"}
